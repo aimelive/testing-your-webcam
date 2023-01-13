@@ -17,6 +17,7 @@
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: 0.4s;
 }
 
 body {
@@ -25,24 +26,29 @@ body {
 }
 .top-header {
   text-align: center;
-  /* display: flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between; */
+  justify-content: space-between;
+  padding: 0px 10px;
 }
 .top-header .logo {
-  margin: 20px auto;
+  /* margin: 20px auto; */
   background-color: var(--white);
   color: var(--black);
   text-align: center;
   display: inline-block;
-  padding: 10px 40px;
+  padding: 10px 30px;
   border-radius: 25%;
   border: 8px solid var(--yellow-green);
+  font-size: 10px;
+  margin: 5px 5px;
 }
 .theme-string{
   background-color: burlywood;
   padding: 10px 20px;
   border-radius: 5px;
+  outline: none;
+  border: none;
 }
 .theme-string:hover {
   cursor: pointer;
@@ -55,6 +61,7 @@ body {
   width: 60%;
   margin: 20px auto;
   text-align: center;
+  position: relative;
 }
 .webcam .video-outer .cam-frame {
   /* background-color: aqua; */
@@ -109,4 +116,25 @@ body {
   color: var(--yellow-green);
   text-align: center;
   padding: 20px;
+}
+.webcam .video-outer .recording-status{
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  left: 0;
+  right: 0;
+}
+.webcam .video-outer .recording-status .red{
+  padding: 0px 10px;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid red;
+  animation: record 2s infinite;
+}
+
+@keyframes record {
+  50%  {opacity: 0.5;}
+  100% {opacity: 1;}
 }

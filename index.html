@@ -9,22 +9,28 @@
   </head>
   <body>
     <div class="top-header">
-        <div class="logo"><h1>VidCam</h1></div>
-        <h4>Switch theme: <span class="theme-string">Light</span></h4>
+      <div class="logo"><h1>VidCam</h1></div>
+      <h4>Switch theme: <button class="theme-string">Light</button></h4>
     </div>
     <div class="webcam">
-        <div class="video-outer">
-            <video class="cam-frame" id="video" autoplay></video>
-            <div class="webcam-start-stop">
-                <a href="#!" class="btn-start" onclick="start()">Start</a>
-                <a href="#!" class="btn-stop" onclick="stop()">Stop</a>
-                <a href="#!" class="btn-full-screen" onclick="openFullscreen()">View full screen</a>
-            </div>
+      <div class="video-outer">
+        <div class="recording-status">
+          <span>Recording &nbsp;<span class="red"></span></span>
+          <span class="duration"></span>
         </div>
+
+        <video class="cam-frame" id="video" autoplay></video>
+        <div class="webcam-start-stop">
+          <a href="#!" class="btn-start" onclick="start()">Start</a>
+          <a href="#!" class="btn-stop" onclick="stopCam()">Stop</a>
+          <a href="#!" class="btn-full-screen" onclick="openFullscreen()"
+            >View full screen</a
+          >
+        </div>
+      </div>
     </div>
     <script src="src/theme.js"></script>
     <script src="src/web.js"></script>
     <script src="src/notification.js"></script>
-    
   </body>
 </html>
